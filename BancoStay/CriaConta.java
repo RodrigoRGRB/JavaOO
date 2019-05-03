@@ -4,7 +4,7 @@ public class CriaConta{
     Cliente rodrigo = new Cliente();
     rodrigo.setNome("Rodrigo");
 
-    Conta conta = new Conta();
+    Conta conta = new Conta(123,321);
     conta.setCliente(rodrigo);
 
     System.out.println(conta.getCliente().getNome());
