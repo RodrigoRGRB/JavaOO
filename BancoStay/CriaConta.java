@@ -1,12 +1,24 @@
 public class CriaConta{
     public static void main(String[] args){
-      Conta primeiraConta =  new Conta();
-      primeiraConta.saldo = 200;
+     Conta contaDoRodrigo = new Conta();
+    Conta teste = new Conta();
 
-      System.out.println(primeiraConta.saldo);
+    contaDoRodrigo.saldo = 100;
+    boolean conseguiuRetirar =contaDoRodrigo.saca(20);
+    contaDoRodrigo.deposita(60);
 
-      Conta segundaConta = new Conta();
-      segundaConta.titular = "Rodrigo";
-      System.out.println("O nome do titular da segunda conta é " + segundaConta.titular);
+
+
+    Conta contaDaMarcela = new Conta();
+    contaDaMarcela.saldo = 1000;
+
+    if(contaDaMarcela.transfere(3000, contaDoRodrigo)){
+      System.out.println("Transferencia feita com sucesso");
+    }else{
+      System.out.println("faltou dinheiro");
+    }
+    System.out.println(contaDoRodrigo.saldo);
+    System.out.println(teste.saldo);
+    System.out.println(contaDaMarcela.saldo);
     }
 }
