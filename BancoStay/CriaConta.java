@@ -6,9 +6,6 @@ public class CriaConta{
     contaDoRodrigo.saldo = 100;
     boolean conseguiuRetirar =contaDoRodrigo.saca(20);
     contaDoRodrigo.deposita(60);
-
-
-
     Conta contaDaMarcela = new Conta();
     contaDaMarcela.saldo = 1000;
 
@@ -20,5 +17,13 @@ public class CriaConta{
     System.out.println(contaDoRodrigo.saldo);
     System.out.println(teste.saldo);
     System.out.println(contaDaMarcela.saldo);
-    }
+
+    Cliente rodrigo = new Cliente();
+    rodrigo.nome = "Rodrigo Gabriel";
+    rodrigo.cpf = "22.2.2.2.2.";
+    rodrigo.profissao = "Diagramador";
+
+    contaDoRodrigo.titular = rodrigo;
+    System.out.println(contaDoRodrigo.titular.nome);
+
 }
