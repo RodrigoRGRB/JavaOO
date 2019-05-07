@@ -3,10 +3,13 @@ public class Conta{
   int agencia;
   private int numero;
   private Cliente titular;
+  public static int total;
 
   public Conta(int agencia, int numero){
+    Conta.total++;
     this.agencia = agencia;
     this.numero = numero;
+    System.out.println("O total de contas é de: "+ total);
   }
 
   public void deposita(double valor){
@@ -24,7 +27,7 @@ public class Conta{
 
   public boolean transfere(double valor, Conta destino){
     if(this.saldo >= valor){
-      this.saldo -= valor;
+      saca(valor);
       destino.deposita(valor);
       return true;
     }
